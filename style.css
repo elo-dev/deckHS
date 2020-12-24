@@ -1,0 +1,96 @@
+body{
+    background-image: url('bg/mainBg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container{
+    background-color: white;
+    margin-top: 25px;
+    box-shadow: 0 0 24px 8px rgba(0,0,0,0.9)
+}
+
+.bgContainer{
+    height: 250px;
+    width: 100%;
+    position: relative;
+}
+
+.bgContainer img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.row>.col-lg_bgContainer{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pageName{
+    font-family: 'Russo One', sans-serif;
+    font-size: 32px;
+    padding-top: 20px;
+}
+
+.btn-arena, 
+.btn-deck{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Russo One';
+    font-size: 21px !important;
+}
+
+.dropdown-menu>button{
+    font-family: 'Russo One';
+    font-size: 17px;
+}
+
+.tier1>img{
+    width: 217px;
+    height: 300px;
+}
+
+#tierAction{
+    min-height: 350px;
+}
+
+.tier2>img{
+    width: 217px;
+    height: 300px;
+}
+
+.tier3>img{
+    width: 217px;
+    height: 300px;
+}
+
+.arena1,
+.arena2,
+.arena3{
+    display: none;
+}
+
+.col_pirates,
+.col_murloks,
+.col_elems,
+.col_drakons,
+.col_animals{
+    display: none;
+}
+
+.wrapper_tierAction{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img_deck>img {
+    width: 119px;
+    height: 168px;
+}
+
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl{
+        max-width: 885px !important;
+    }
+}

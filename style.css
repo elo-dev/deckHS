@@ -89,6 +89,10 @@ body{
     height: 168px;
 }
 
+.column:not(:last-child){
+    border-bottom: 5px solid black;
+}
+
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl{
         max-width: 885px !important;

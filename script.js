@@ -18,6 +18,18 @@ function bindArena(triggerSelector, arenaSelector){
     });
 }
 
+let selectEntity = document.getElementById("selectEntity"),
+    add = "";
+    for (let i = 1; i <= 41; ++i) {
+    add += `<li>
+                <input type="checkbox" id="checkBoxAnimals${i}" />
+                <label id="selectEntityImg" for="checkBoxAnimals${i}">
+                    <img src="allEntity/entity${i}.png">
+                </label>
+            </li>`;
+}
+selectEntity.innerHTML = add;
+
 bindArena('.tier1-arena', '.arena1');
 bindArena('.tier2-arena', '.arena2');
 bindArena('.tier3-arena', '.arena3');

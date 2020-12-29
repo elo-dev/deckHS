@@ -80,6 +80,10 @@ body{
     display: none;
 }
 
+.createDeck{
+    display: none;
+}
+
 .wrapper_tierAction{
     display: flex;
     justify-content: space-between;

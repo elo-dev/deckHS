@@ -1,22 +1,39 @@
 'use strict';
 
-function bindArena(triggerSelector, arenaSelector){
-    const trigger = document.querySelectorAll(triggerSelector),
+function openTabs(triggerSelector, arenaSelector){
+    const btnCreateDeck = document.querySelector('#btnCreateDeck'),
+          createDeck = document.querySelector('.createDeck'),
+          trigger = document.querySelectorAll(triggerSelector),
           arena = document.querySelector(arenaSelector);
 
-    trigger.forEach(item => {
-        item.addEventListener('click', (e) =>{
-            if(e.target.id != 'dropdownItem'){
-                e.preventDefault();
-                arena.style.display = 'none';
-            } else if(e.target.id == 'dropdownItem'){
-                arena.style.display = (arena.style.display != 'block') ? 'block' : 'none';
-                document.getElementById('tierAction').style.minHeight = '0px';
-                item.style.color = (item.style.color != '') ? '' : 'red';
-            }
-        });
-    });
+          trigger.forEach(item => {
+            item.addEventListener('click', (e) =>{
+                if(e.target.id == 'dropdownItem'){
+                    createDeck.style.display = 'none';
+                    arena.style.display = (arena.style.display != 'block') ? 'block' : 'none';
+                    item.style.color = (item.style.color != '') ? '' : 'red';
+                }
+            });
+            btnCreateDeck.addEventListener('click', (e) =>{
+                if(e.target.id == 'btnCreateDeck'){
+                    createDeck.style.display = 'block';
+                    arena.style.display = 'none';
+                    item.style.color = '';
+                }
+            });
+          });
 }
+
+openTabs('.tier1-arena', '.arena1');
+openTabs('.tier2-arena', '.arena2');
+openTabs('.tier3-arena', '.arena3');
+openTabs('.pirates_deck', '.col_pirates');
+openTabs('.murloks_deck', '.col_murloks');
+openTabs('.elems_deck', '.col_elems');
+openTabs('.drakons_deck', '.col_drakons');
+openTabs('.demons_deck', '.col_demons');
+openTabs('.animals_deck', '.col_animals');
+openTabs('.mehs_deck', '.col_mehs');
 
 let selectEntity = document.getElementById("selectEntity"),
     add = "";
@@ -29,14 +46,3 @@ let selectEntity = document.getElementById("selectEntity"),
             </li>`;
 }
 selectEntity.innerHTML = add;
-
-bindArena('.tier1-arena', '.arena1');
-bindArena('.tier2-arena', '.arena2');
-bindArena('.tier3-arena', '.arena3');
-bindArena('.pirates_deck', '.col_pirates');
-bindArena('.murloks_deck', '.col_murloks');
-bindArena('.elems_deck', '.col_elems');
-bindArena('.drakons_deck', '.col_drakons');
-bindArena('.demons_deck', '.col_demons');
-bindArena('.animals_deck', '.col_animals');
-bindArena('.mehs_deck', '.col_mehs');

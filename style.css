@@ -161,6 +161,21 @@ label img{
     z-index: -1;
 }
 
+.btn_addDeck{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-success{
+    margin-bottom: 20px;
+    font-size: 1.35rem !important;
+}
+
+.img_userDeck{
+    width: 119px;
+    height: 168px;
+}
+
 @media (min-width: 1200px){
     .container, .container-lg, .container-md, .container-sm, .container-xl{
         max-width: 885px !important;

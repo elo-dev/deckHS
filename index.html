@@ -90,26 +90,64 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-12">
                     <div class="createDeck">
-                        <h2 class="selectArhitip">Выберите архитип:</h2>
-                            <input type="checkbox" name="deckPirate" value="1">Пираты</p>
-                            <input type="checkbox" name="deckMurloks" value="1">Мурлоки</p>
-                            <input type="checkbox" name="deckElems" value="1">Элементали</p>
-                            <input type="checkbox" name="deckDragons" value="1">Драконы</p>
-                            <input type="checkbox" name="deckDemons" value="1">Демоны</p>
-                            <input type="checkbox" name="deckAnimals" value="1">Звери</p>
-                            <input type="checkbox" name="deckMehs" value="1">Механизмы</p>
-                        <h2 class="nameDeck">Название вашей деки:</h2>
-                            <input type="text" class="nameDeck">
-                        <h2 class="selectEntity_title">Выберите существо:</h2>
-                        <div id="entity">
-                            <ul id="selectEntity">
+                        <form id="form_createDeck"  class="col-lg-12">
+                            <h2 class="selectArchetype">Выберите архитип:</h2>
+                            <p>
+                                <label>
+                                    <input class="input_choiceDeckArchetype" type="radio" name="choiceDeckArchetype" value="pirates">
+                                    <span>Пираты</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="input_choiceDeckArchetype" type="radio" name="choiceDeckArchetype" value="murloks">
+                                    <span>Мурлоки</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="input_choiceDeckArchetype" type="radio" name="choiceDeckArchetype" value="elems">
+                                    <span>Элементали</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="input_choiceDeckArchetype" type="radio" name="choiceDeckArchetype" value="dragons">
+                                    <span>Драконы</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="input_choiceDeckArchetype" type="radio" name="choiceDeckArchetype" value="demons">
+                                    <span>Демоны</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="input_choiceDeckArchetype" type="radio" name="choiceDeckArchetype" value="mount">
+                                    <span>Звери</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input class="input_choiceDeckArchetype" type="radio" name="choiceDeckArchetype" value="mechs">
+                                    <span>Механизмы</span>
+                                </label>
+                            </p>
+                            <h2 class="title_nameDeck">Название вашей деки:</h2>
+                                <input type="text" class="nameDeck" name="deckName">
+                            <h2 class="selectEntity_title">Выберите существо:</h2>
+                            <div id="entity">
+                                <ul id="selectEntity">
 
-                            </ul>
-                        </div>
+                                </ul>
+                            </div>
+                            <div class="btn_addDeck">
+                                <button id="btn-add" type="button" class="btn btn-success">Создать Деку</button>
+                            </div>
+                        </form>
                     </div>
-                </div>
             </div>
 
             <div class="row">
@@ -253,6 +291,14 @@
                     </div>
                 </div>
             </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="userDeck">
+                    
+                </div>
+            </div>
+        </div>    
     </div>
     
 
